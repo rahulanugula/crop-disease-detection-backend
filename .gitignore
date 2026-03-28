@@ -1,0 +1,78 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+/mvnw
+/mvnw.cmd
+/.mvn/wrapper/maven-wrapper.properties
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (if any python scripts are present)
+*.pydevproject
+
+# CDT-specific (if any C++ stuff is present)
+.cproject
+
+# JDT-specific (if any Java stuff is present)
+.classpath
+
+# Maven
+.factorypath
+.project
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.netlify
+
+# OS related files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
