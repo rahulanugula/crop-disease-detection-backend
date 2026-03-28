@@ -12,7 +12,7 @@ COPY src src
 RUN chmod +x mvnw
 
 # Build the project using the wrapper to ensure version consistency
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package -DskipTests && ls -l target/
 
 # Run stage - Use a smaller JRE for running the application
 FROM eclipse-temurin:17-jre-jammy
