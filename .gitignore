@@ -1,8 +1,8 @@
 target/
-!.mvn/wrapper/maven-wrapper.jar
-/mvnw
-/mvnw.cmd
-/.mvn/wrapper/maven-wrapper.properties
+# Maven wrapper (Needed for Docker builds)
+!mvnw
+!mvnw.cmd
+!.mvn/wrapper/maven-wrapper.properties
 
 # Compiled class file
 *.class
