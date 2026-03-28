@@ -1,5 +1,6 @@
 package com.cropdisease.backend.security;
 
+import org.springframework.beans.factory.annotation.Value;
 import com.cropdisease.backend.security.jwt.AuthEntryPointJwt;
 import com.cropdisease.backend.security.jwt.AuthTokenFilter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -79,10 +80,14 @@ public class WebSecurityConfig {
         return http.build();
     }
 
+    @Value("${cors.allowed-origins:http://localhost:5173}")
+    private String allowedOrigins;
+
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173")); // Vite frontend port
+        // Handle multiple origins if comma-separated
+        configuration.setAllowedOrigins(Arrays.asList(allowedOrigins.split(",")));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
